@@ -1,9 +1,3 @@
----
-title: tools
-categories: tools
-tags: [maven, gradle]
----
-
 #### maven
 
 ##### 目录结构
