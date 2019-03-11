@@ -1,9 +1,3 @@
----
-title: Java基础
-categories: Java
-tags: [Java]
----
-
 #### java创建类
 
 ##### .java文件
@@ -229,6 +223,43 @@ interface C extends A,B{//B、A虽然有相同的方法say，但B覆盖了A，C�
 4. 类中所有的private方法都隐式地指定为是final的，由于无法在类外使用private方法，所以也就无法覆盖它
 5. 用来修饰方法参数，表示在变量的生存期中它的值不能被改变
 6. 修饰类，表示该类无法被继承
+
+
+
+#### 多态与继承
+
+```java
+public class A {
+    public String show(D obj) {
+        return "a and d";
+    }
+    public String show(A obj) {
+        return "a and a";
+    }
+}
+
+public class B extends A {
+    public String show(B obj) {
+        return "b and b";
+    }
+    public String show(A obj) {
+        return "b and a";
+    }
+}
+
+public class D {}
+
+public class Main {
+    public static void main(String[] args) {
+        A a = new B();//这里a只能调用A中的两个方法：show(D)和show(A)
+        B b = new B();//B对show(A)进行了重写
+        //B为A的子类，故a.show(b)调用show(A)
+        System,out.println(a.show(b));//打印结果：b and a
+    }
+}
+```
+
+
 
 #### 类型相关
 
@@ -715,14 +746,14 @@ public class GenericTest {
 
 ```java
 //泛型类中的静态方法和静态变量不可以使用泛型类所声明的泛型类型参数
-public class Test2<T> {      
+public class Test2<T> {
     public static T one;   //编译错误      
     public static  T show(T one){ //编译错误      
       	return null;      
     }      
 }    
 
-public class Test2<T> {      
+public class Test2<T> {
     public static <T> T show(T one){//这是正确的
         return null;      
     }      
