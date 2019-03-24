@@ -791,7 +791,7 @@ public class Test {
 - 泛型是不能继承的
 
 ```java
-public void showKeyValue1(Generic<Number> obj){
+public void showKeyValue1(Generic<Number> obj) {
     Log.d("泛型测试","key value is " + obj.getKey());
 }
 
@@ -878,7 +878,7 @@ List<String>[] ls2 = new ArrayList[10];
 //sun 官方例子
 List<String>[] lsa = new List<String>[10]; // Not really allowed.   
 Object o = lsa;    
-Object[] oa = (Object[]) o; //数组类型也是Object的子类   
+Object[] oa = (Object[]) o; //数组类型也是Object的子类
 
 List<Integer> li = new ArrayList<Integer>();    
 li.add(new Integer(3));    
@@ -957,13 +957,16 @@ public class Word implements OfficeAble {
 //Ppt
 ```
 
-##### 获取类类型的三种方式
+##### 获取类类型的四种方式
 
 ```java
 Class c1 = Class.forName("java.lang.String");
 String s = "hello";
 Class c2 = s.getClass();
 Class c3 = String.class;
+
+ClassLoader loader = Thread.currentThread().getContextClassLoader();
+Class c4 = loader.loadClass("java.lang.String");
 ```
 
 每个类都是Class的实例，Class对象可以看作类的字节码。
