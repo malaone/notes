@@ -200,7 +200,7 @@ Thread1对应newTable1，Thread2对应newTable2
 
 1. 执行Thread1，newTable1[i]----->2----->1，挂起
 2. 执行Thread2，newTable2[i]----->1，newTable2[i]----->2----->1，newTable2[i]----->3----->2----->1，挂起
-3. 执行Thread1，此时会把2的next插入到2的前面，oldTable中2的next是3，Thread2后，2的next为2，故newTable1[i]----->1----->2----->1，这样1和2就成了死环
+3. 执行Thread1，此时会把2的next插入到2的前面，oldTable中2的next是3，Thread2后，2的next为1，故newTable1[i]----->1----->2----->1，这样1和2就成了死环
 
 ------
 
