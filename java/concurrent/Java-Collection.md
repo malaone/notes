@@ -239,7 +239,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 		else {
 			for (int binCount = 0; ; ++binCount) {
 				if ((e = p.next) == null) {
-					p.next = newNode(hash, key, value, null);
+					p.next = newNode(hash, key, value, null);//插入尾部
 					if (binCount >= TREEIFY_THRESHOLD - 1) //树化条件一
 						treeifyBin(tab, hash);
 					break;
