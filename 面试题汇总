@@ -145,4 +145,57 @@
 2.12345共5个条件，可以任意个数组合，如何设计系统？
 
 
+头条 round 1
+h5和app访问链路有什么区别，两者如何做数据路由
+rpc框架如何做通信路由
+set化是怎么实现的
+说下sidecar模式，有什么优缺点
+redis cluster机制是怎样的
+写db数据量过大如何处理
+db数据量有多大，最大的表有多少数据
+raft和gossip协议有什么区别
+异地部署集群如何做数据同步，数据回环问题如何解决
+snowflake算法是如何实现的
+kafka如何保证exactly once语义
+算法题：最长连续01字符串
 
+头条 round 2：
+算法：翻转链表
+不用算法怎么求根号，近似到小数
+java类加载器机制
+类什么时候会被加载
+双亲委派机制
+threadlocal
+redis rdb and aof 混合持久化
+设计一个抖音分销系统。
+
+pdd round 1：
+项目介绍，讲了很久，从业务模式到项目模块拆分。 
+项目遇到的困难 业务、技术
+如何做监控，cat实现原理
+数据一致性如何监控，如何做处理
+如何做数据看板
+rpc框架原理
+算法：three sum
+
+得物1：
+介绍下项目，介绍项目模块
+hashmap原理
+threadLocal原理
+reentrantlock（看下细节）
+项目中的技术难点
+mysql优化、索引失效、uuid主键，会有什么问题
+
+
+美的：
+1.string stringbuilder stringbuffer区别
+2.分布式事务
+3.rabbitmq如何保证可靠性
+4.微服务开发过程中遇到的坑
+
+永辉：
+1.redis rehash如何实现的
+2.redis geo如何实现
+3.项目中es分词怎么做的
+4.rabbitmq延迟队列怎么实现的
+5.全链路如何实现
